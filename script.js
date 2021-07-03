@@ -28,23 +28,18 @@ function startGame () {
 
 
 function renderGame () {
-   
     document.getElementById("sum-el").innerText = "Sum: " + sum
     for (let i = 0; i < cards.length;  i++) {
     document.querySelector("#cards-el").innerText = "Cards: " + cards + " "
-    // console.log(cards[i])
-    }
+       }
 
     if (sum <= 20) {
         message = "Do you want to draw a new card? 🙂"
-             // console.log("Do you want to draw a new card? 🙂")
-    } else if (sum === 21) {
+           } else if (sum === 21) {
         message = "Wohoo! You've got Blackjack! 🥳"
-        // console.log("Wohoo! You've got Blackjack! 🥳")
-        hasBlackJack = true
+         hasBlackJack = true
     } else {
         message = "You're out of the game! 😭"
-        // console.log("You're out of the game! 😭")
         isAlive = false
     }
     document.getElementById("message-el").innerText = message
